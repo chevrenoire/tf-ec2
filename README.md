@@ -21,7 +21,7 @@
 ### Example
 ```
 module "tf-ec2" {
-  source           = "../tf-ec2"
+  source           = "github.com/chevrenoire/tf-ec2@main"
   name             = var.name
   environment      = var.environment
   region           = var.region
