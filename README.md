@@ -18,3 +18,26 @@
 | tags_service | name of the service | string | no | yes |
 | tags_role | name of the role | string | no | yes |
 
+### Example
+```
+module "tf-ec2" {
+  source           = "../tf-ec2"
+  name             = var.name
+  environment      = var.environment
+  region           = var.region
+  vpc_id           = var.vpc_id
+  public_dns_zone  = var.public_dns_zone
+  private_dns_zone = var.private_dns_zone
+  ami_owner        = var.ami_owner
+  ami_version_path = var.ami_version_path
+  instance_type    = var.instance_type
+  icount           = var.icount
+  key_name         = var.key_name
+  ssh_sg_id        = var.ssh_sg_id
+  root_volume_size = var.root_volume_size
+  tags_application = var.tags_application
+  tags_environment = var.tags_environment
+  tags_service     = var.tags_service
+  tags_role        = var.tags_role
+}
+```
